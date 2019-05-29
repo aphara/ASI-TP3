@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The World News :: Article</title>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">The table header</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for item in items %}
+       <TR>
+            <TD class="c1">{{item.id}}</TD>
+            <TD class="c2">{{item.author}}</TD>
+             <TD class="c3">{{item.title}}</TD>
+           <TD class="c4">{{item.date}}</TD>
+           <TD class="c5">{{item.section}}</TD>
+           <TD class="c6">{{item.status}}</TD>
+           <TD class="c7">{{item.text}}</TD>
+       </TR>
+    {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>

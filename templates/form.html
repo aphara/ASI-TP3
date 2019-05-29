@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The World News :: Article Edition</title>
+    <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body >
+    <form id="form" method="post" action="http://127.0.0.1:5000/insertdb">
+        <div class="form-example">
+            <div class = "author-date">
+                <label for="Author" >Author</label>
+                <input type="text" name="Author" id="Author" >
+                <label for="Date">Date</label>
+                <input type="date" name="Date" id="Date">
+            </div>
+            <div>
+                <label for="Title">Title</label><br>
+                <input type="text" name="Title" id="Title">
+            </div>
+            <div>
+                <label for="Section">Section</label><br>
+                <select name="Section" id="Section" >
+                    <option value="Politics" id="Section-0">Politics</option>
+                    <option value="Cinema" id="Section-1">Cinema</option>
+                    <option value="Music" id="Section-2">Music</option>
+                </select>
+            </div>
+            <div class = "radio">
+                <label for="Status" >Status</label><br>
+                <div>
+                    <input name="Status" id="Status-0" required="required" aria-required="true" value="Edit" type="radio">
+                    <label for="Status-0">In edition</label>
+                    <input name="Status" id="Status-1" value="Submitted" type="radio">
+                    <label for="Status-1">Submitted</label>
+                    <input name="Status" id="Status-2" value="Accepted" type="radio">
+                    <label for="Status-2">Accepted</label>
+                    <input name="Status" id="Status-3" value="Published" type="radio">
+                    <label for="Status-3">Published</label>
+                </div>
+            </div>
+            <div>
+                <label for="Text" >Text</label><br>
+                <textarea name="Text" id="Text" required="required" aria-required="true"></textarea>
+            </div>
+              </div>
+            <div>
+                <input type="submit" value="Save">
+            </div>
+    </form>
+</body>
+</html>
