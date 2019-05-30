@@ -3,16 +3,6 @@ import os
 import config
 
 
-def test():
-    mariadb_connection = mariadb.connect(user=os.environ.get('DB_USER'), password=os.environ.get('DB_PASSWORD'), database=os.environ.get('DB_NAME'))
-    cursor = mariadb_connection.cursor()
-    results = []
-    cursor.execute("SELECT author,title from article where author=\'Alex\'")
-    for row in cursor.fetchall():
-        results.append(row)
-    return results
-
-
 class Article(object):
     def __init__(self, id, author, title, date, section, status, text):
         self.id = id
