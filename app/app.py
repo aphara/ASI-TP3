@@ -24,10 +24,10 @@ def display_articles():
 
 @app.route('/insertdb', methods=['POST'])
 def display_form():
-    x = article.Article(article.Article.getlastid()+1, request.form['Author'], request.form['Title'],
+    x = article.Article(article.Article.getlastid() + 1, request.form['Author'], request.form['Title'],
                         request.form['Date'], request.form['Section'],
                         request.form['Status'], request.form['Text'])
-    y = article.Article.print(x)
+    y = article.Article().printarticle(x)
     z = [y]
     article.Article.insertdb(z)
     return redirect(url_for('display_articles'))
